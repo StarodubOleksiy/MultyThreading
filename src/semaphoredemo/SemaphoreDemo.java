@@ -184,7 +184,7 @@ class NewThirdThread implements Runnable {
     }
     System.out.println("Exiting child Third thread.");
   lock.release();
-  //  lock.release(2);
+  //  lock.release(2); 
     }
 }
 
@@ -193,10 +193,10 @@ public class SemaphoreDemo {
 
     public static void main(String[] args) throws InterruptedException {
   Semaphore lock = new SemaphoreImplementation();  
-new NewThirdThread(lock);
+new NewThirdThread(lock); // create a new thread
 new NewFirstThread(lock); // create a new thread
-new NewSecondThread(lock);
-new NewThirdThread(lock);
+new NewSecondThread(lock);// create a new thread
+new NewThirdThread(lock);// create a new thread
    
  
     }
