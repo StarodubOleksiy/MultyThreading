@@ -62,9 +62,7 @@ class SemaphoreImplementation implements Semaphore {
         {  
            if(this.nextIteration)
             lock.wait();   
-            System.out.println("numberOfThreads =" + numberOfThreads);
             numberOfThreads=0;
-            System.out.println("numberOfThreads =" + numberOfThreads);
             lock.notify();
             if(this.nextIteration)
             lock.wait();
